@@ -218,7 +218,7 @@
         </tr>
         <tr>
           <td>目前所在城市（currentCity）</td>
-          <td>每次登入時自動偵測（GPS／Wi-Fi 或 IP），顯示天氣及「旅遊中」狀態給好友圈；僅儲存城市名稱，不保留座標</td>
+          <td>每次登入時自動偵測（GPS／Wi-Fi 或 IP），顯示天氣及「旅行中」狀態給好友圈；僅儲存城市名稱，不保留座標</td>
           <td>自動偵測（可拒絕定位授權，改以 IP 估算）</td>
         </tr>
         <tr>
@@ -236,7 +236,7 @@
 
     <p style="margin-top: 16px;">
       若您使用 Apple 登入（Sign in with Apple）或 Google 帳號登入，我們僅接收登入服務提供的匿名識別碼；
-      您可選擇是否向我們揭露您的電子郵件地址。
+      您可選擇是否向我們揭露您的電子郵件地址。若您選擇提供，我們僅將其用於帳號識別與回應支援請求，不用於行銷目的。
     </p>
   </div>
 
@@ -315,7 +315,7 @@
   <!-- 7. 第三方服務 -->
   <div class="section">
     <h2>7. 第三方服務</h2>
-    <p>本 App 使用以下 Google Firebase 服務，均受 Google 隱私權政策規範：</p>
+    <p>本 App 使用以下第三方服務，各服務均受其各自隱私權政策規範：</p>
 
     <table class="data-table" aria-label="第三方服務">
       <thead>
@@ -343,12 +343,26 @@
           <td>Firebase Cloud Messaging (FCM)</td>
           <td>傳送推播通知</td>
         </tr>
+        <tr>
+          <td>Open-Meteo</td>
+          <td>根據偵測到的城市座標取得天氣資料（傳送經緯度，不含個人識別資訊）</td>
+          <td><a href="https://open-meteo.com/en/terms" target="_blank" rel="noopener noreferrer">Open-Meteo 條款</a></td>
+        </tr>
+        <tr>
+          <td>Nominatim（OpenStreetMap）</td>
+          <td>將 GPS 座標反向解析為城市名稱（傳送座標，不含帳號資訊）</td>
+          <td><a href="https://osmfoundation.org/wiki/Privacy_Policy" target="_blank" rel="noopener noreferrer">OSM 隱私政策</a></td>
+        </tr>
+        <tr>
+          <td>ipapi.co</td>
+          <td>GPS 定位被拒絕時，以 IP 位址估算所在城市（不含帳號資訊）</td>
+          <td><a href="https://ipapi.co/privacy/" target="_blank" rel="noopener noreferrer">ipapi.co 隱私政策</a></td>
+        </tr>
       </tbody>
     </table>
 
     <p style="margin-top: 14px;">
-      除上述 Firebase 服務外，本 App 不整合任何其他第三方 SDK、
-      分析工具或廣告網路。
+      本 App 不整合任何廣告網路或跨 App 行為追蹤 SDK。
     </p>
   </div>
 
