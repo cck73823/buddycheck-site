@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="好朋友起床囉 (BuddyCheck) 隱私權政策" />
+  <title>隱私權政策 — 好朋友起床囉 (BuddyCheck)</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber:   #F5A623;
+      --amber-dk:#D4891A;
+      --bg:      #FDFAF4;
+      --card:    #FFFFFF;
+      --text:    #2C2C2C;
+      --muted:   #666666;
+      --border:  #E8E0CF;
+      --radius:  16px;
+      --shadow:  0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: -apple-system, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei",
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.8;
+      font-size: 17px;
+    }
+
+    .wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding: 48px 0 32px;
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 32px;
+    }
+
+    header h1 {
+      font-size: clamp(22px, 4.5vw, 30px);
+      font-weight: 700;
+    }
+
+    header p {
+      color: var(--muted);
+      margin-top: 8px;
+      font-size: 15px;
+    }
+
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--amber-dk);
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      margin-bottom: 24px;
+    }
+    .back-link:hover { color: var(--amber); }
+
+    /* ── Sections ── */
+    .section {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 28px 32px;
+      margin-bottom: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .section h2 {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--amber-dk);
+      margin-bottom: 14px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--border);
+    }
+
+    .section p { margin-bottom: 12px; }
+    .section p:last-child { margin-bottom: 0; }
+
+    /* ── Tables / data lists ── */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 12px;
+      font-size: 15px;
+    }
+
+    .data-table th {
+      background: #FFF8EC;
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 700;
+      color: var(--amber-dk);
+    }
+
+    .data-table td {
+      border: 1px solid var(--border);
+      padding: 10px 14px;
+      vertical-align: top;
+    }
+
+    .data-table tr:nth-child(even) td { background: #FDFAF4; }
+
+    /* ── Do-not-collect badges ── */
+    .no-collect {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .no-badge {
+      background: #F0F8EC;
+      border: 1px solid #B8DDA8;
+      color: #3A7D2C;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ── Links ── */
+    a { color: var(--amber-dk); text-decoration: underline; }
+    a:hover { color: var(--amber); }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .section { padding: 20px 16px; }
+      body { font-size: 15px; }
+      .data-table { font-size: 13px; }
+      .data-table th, .data-table td { padding: 8px 10px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <a href="index.html" class="back-link">← 返回首頁</a>
+
+  <header>
+    <h1>🛡️ 隱私權政策</h1>
+    <p>好朋友起床囉（BuddyCheck）</p>
+    <p>最後更新日期：2026 年 5 月 7 日</p>
+  </header>
+
+  <!-- 1. 導言 -->
+  <div class="section">
+    <h2>1. 前言</h2>
+    <p>
+      「好朋友起床囉」（以下簡稱「本 App」）由開發者 CK（以下簡稱「我們」）提供。
+      本隱私權政策說明我們如何收集、使用及保護您的個人資料。
+    </p>
+    <p>
+      我們的核心原則：<strong>只收集讓 App 正常運作絕對必要的最少資料</strong>。
+      我們不出售、不交換、不租借您的個人資料給任何第三方。
+    </p>
+    <p>
+      使用本 App 即表示您同意本政策。若您不同意，請停止使用並刪除帳號。
+    </p>
+  </div>
+
+  <!-- 2. 收集的資料 -->
+  <div class="section">
+    <h2>2. 我們收集哪些資料</h2>
+    <p>我們收集的資料非常有限，僅包含以下項目：</p>
+
+    <table class="data-table" aria-label="收集資料項目">
+      <thead>
+        <tr>
+          <th>資料項目</th>
+          <th>用途</th>
+          <th>是否必填</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>暱稱</td>
+          <td>在好友儀表板上顯示您的名字</td>
+          <td>必填</td>
+        </tr>
+        <tr>
+          <td>大頭貼（emoji 或內建圖示）</td>
+          <td>在好友格子中識別您的身份</td>
+          <td>選填（可使用預設）</td>
+        </tr>
+        <tr>
+          <td>打卡時間戳記</td>
+          <td>記錄您今天是否已報平安</td>
+          <td>核心功能</td>
+        </tr>
+        <tr>
+          <td>Firebase 推播通知權杖（FCM Token）</td>
+          <td>傳送每日提醒通知至您的裝置</td>
+          <td>開啟通知功能時</td>
+        </tr>
+        <tr>
+          <td>帳號識別碼（匿名 UID）</td>
+          <td>識別您的帳號、維持登入狀態</td>
+          <td>必要</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top: 16px;">
+      若您使用 Apple 登入（Sign in with Apple），我們僅接收 Apple 提供的匿名識別碼；
+      您可選擇是否向我們揭露您的電子郵件地址。
+    </p>
+  </div>
+
+  <!-- 3. 不收集的資料 -->
+  <div class="section">
+    <h2>3. 我們<em>不</em>收集的資料</h2>
+    <p>以下資料我們絕對不收集，也從不要求存取：</p>
+    <div class="no-collect">
+      <span class="no-badge">🚫 GPS 位置</span>
+      <span class="no-badge">🚫 相機 / 照片</span>
+      <span class="no-badge">🚫 通訊錄</span>
+      <span class="no-badge">🚫 麥克風</span>
+      <span class="no-badge">🚫 健康資料</span>
+      <span class="no-badge">🚫 瀏覽紀錄</span>
+      <span class="no-badge">🚫 行為追蹤</span>
+      <span class="no-badge">🚫 廣告識別碼（IDFA）</span>
+    </div>
+    <p style="margin-top: 16px;">
+      本 App 不含任何第三方廣告 SDK，也不使用任何跨 App 追蹤技術。
+    </p>
+  </div>
+
+  <!-- 4. 資料使用方式 -->
+  <div class="section">
+    <h2>4. 我們如何使用您的資料</h2>
+    <p>我們僅將您的資料用於以下目的，不作其他用途：</p>
+    <ul style="padding-left: 20px; margin-top: 8px;">
+      <li style="margin-bottom: 8px;">顯示您的打卡狀態於您好友圈的儀表板上</li>
+      <li style="margin-bottom: 8px;">傳送每日打卡提醒推播通知（如您已開啟）</li>
+      <li style="margin-bottom: 8px;">維持您的帳號登入狀態</li>
+      <li style="margin-bottom: 8px;">維運 App 所需的基本技術日誌（不含個人識別資料）</li>
+    </ul>
+  </div>
+
+  <!-- 5. 資料儲存與安全 -->
+  <div class="section">
+    <h2>5. 資料儲存地點與安全</h2>
+    <p>
+      您的資料儲存於 <strong>Google Firebase（Firestore 資料庫）</strong>，
+      伺服器位於 <strong>美國及/或台灣地區</strong>（依 Firebase 地區設定）。
+    </p>
+    <p>
+      Firebase 提供業界標準的加密保護：傳輸過程使用 TLS 加密，靜態資料亦加密儲存。
+      請參閱 <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener noreferrer">Firebase 隱私權聲明</a>。
+    </p>
+    <p>
+      好友圈的打卡資料僅限圈內成員可見，其他用戶無法存取。
+      我們使用 Firebase 安全規則強制執行此存取控制。
+    </p>
+  </div>
+
+  <!-- 6. 資料保留與刪除 -->
+  <div class="section">
+    <h2>6. 資料保留與帳號刪除</h2>
+    <p>
+      您的打卡紀錄預設保留 <strong>90 天</strong>，超過期限後自動刪除。
+      帳號基本資料（暱稱、頭像）保留至您主動刪除帳號為止。
+    </p>
+    <p>
+      <strong>您隨時可以刪除帳號。</strong>
+      刪除帳號後，我們將於 30 天內從 Firebase 中移除您的所有個人資料，包含：
+    </p>
+    <ul style="padding-left: 20px; margin-top: 8px;">
+      <li style="margin-bottom: 6px;">暱稱與頭像</li>
+      <li style="margin-bottom: 6px;">所有打卡紀錄</li>
+      <li style="margin-bottom: 6px;">FCM 推播權杖</li>
+      <li style="margin-bottom: 6px;">帳號識別碼</li>
+    </ul>
+    <p style="margin-top: 12px;">
+      如需申請刪除帳號或資料，請透過
+      <a href="https://github.com/cck73823/buddycheck-site/issues" target="_blank" rel="noopener noreferrer">支援頁面</a>
+      與我們聯繫。
+    </p>
+  </div>
+
+  <!-- 7. 第三方服務 -->
+  <div class="section">
+    <h2>7. 第三方服務</h2>
+    <p>本 App 使用以下 Google Firebase 服務，均受 Google 隱私權政策規範：</p>
+
+    <table class="data-table" aria-label="第三方服務">
+      <thead>
+        <tr>
+          <th>服務</th>
+          <th>用途</th>
+          <th>隱私政策</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Firebase Authentication</td>
+          <td>帳號登入與身份驗證</td>
+          <td rowspan="3">
+            <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">
+              Google 隱私權政策
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td>Cloud Firestore</td>
+          <td>儲存用戶資料與打卡紀錄</td>
+        </tr>
+        <tr>
+          <td>Firebase Cloud Messaging (FCM)</td>
+          <td>傳送推播通知</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p style="margin-top: 14px;">
+      除上述 Firebase 服務外，本 App 不整合任何其他第三方 SDK、
+      分析工具或廣告網路。
+    </p>
+  </div>
+
+  <!-- 8. 兒童隱私 -->
+  <div class="section">
+    <h2>8. 兒童隱私</h2>
+    <p>
+      本 App 專為成年用戶（特別是 65 歲以上長輩）設計，
+      不向 13 歲以下兒童提供服務，也不故意收集其個人資料。
+      若發現有未成年人使用，請聯繫我們，我們將立即刪除相關資料。
+    </p>
+  </div>
+
+  <!-- 9. 您的權利 -->
+  <div class="section">
+    <h2>9. 您的隱私權利</h2>
+    <p>依據適用法律，您享有以下權利：</p>
+    <ul style="padding-left: 20px; margin-top: 8px;">
+      <li style="margin-bottom: 8px;"><strong>存取權：</strong>您可要求查看我們持有的您的個人資料。</li>
+      <li style="margin-bottom: 8px;"><strong>更正權：</strong>您可在 App 內直接更新暱稱與頭像。</li>
+      <li style="margin-bottom: 8px;"><strong>刪除權：</strong>您可申請完整刪除帳號及所有相關資料。</li>
+      <li style="margin-bottom: 8px;"><strong>撤回同意：</strong>您可隨時關閉推播通知（不影響 App 其他功能）。</li>
+    </ul>
+    <p style="margin-top: 12px;">
+      行使上述權利，請透過
+      <a href="https://github.com/cck73823/buddycheck-site/issues" target="_blank" rel="noopener noreferrer">支援頁面</a>
+      聯繫我們。我們將於 30 天內回應。
+    </p>
+  </div>
+
+  <!-- 10. 政策更新 -->
+  <div class="section">
+    <h2>10. 政策更新</h2>
+    <p>
+      我們可能不定期更新本隱私權政策。若有重大變更，
+      我們將在 App 內以推播通知或登入提示告知您。
+      繼續使用本 App 即視為您接受更新後的政策。
+    </p>
+    <p>
+      本政策的歷史版本可於
+      <a href="https://github.com/cck73823/buddycheck-site" target="_blank" rel="noopener noreferrer">GitHub 儲存庫</a>
+      的 commit 紀錄中查閱。
+    </p>
+  </div>
+
+  <!-- 11. 聯絡我們 -->
+  <div class="section">
+    <h2>11. 聯絡我們</h2>
+    <p>
+      如有任何隱私相關問題，請透過以下方式聯繫我們：
+    </p>
+    <p>
+      📬 支援頁面（GitHub Issues）：<br>
+      <a href="https://github.com/cck73823/buddycheck-site/issues"
+         target="_blank" rel="noopener noreferrer">
+        https://github.com/cck73823/buddycheck-site/issues
+      </a>
+    </p>
+    <p style="margin-top: 8px; color: var(--muted); font-size: 14px;">
+      我們會盡力在 5 個工作天內回覆您的問題。
+    </p>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>
+      © 2026 好朋友起床囉 (BuddyCheck) &nbsp;·&nbsp;
+      <a href="index.html">返回首頁</a> &nbsp;·&nbsp;
+      <a href="https://github.com/cck73823/buddycheck-site/issues"
+         target="_blank" rel="noopener noreferrer">聯絡支援</a>
+    </p>
+  </footer>
+
+</div>
+</body>
+</html>

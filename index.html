@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="好朋友起床囉 — 每天一鍵報平安，和老朋友互相關心。" />
+  <title>好朋友起床囉 (BuddyCheck)</title>
+  <style>
+    /* ── Reset & base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --amber:   #F5A623;
+      --amber-dk:#D4891A;
+      --bg:      #FDFAF4;
+      --card:    #FFFFFF;
+      --text:    #2C2C2C;
+      --muted:   #666666;
+      --border:  #E8E0CF;
+      --radius:  16px;
+      --shadow:  0 4px 18px rgba(0,0,0,0.08);
+    }
+
+    body {
+      font-family: -apple-system, "PingFang TC", "Noto Sans TC", "Microsoft JhengHei",
+                   "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      font-size: 18px;          /* elder-friendly base */
+    }
+
+    /* ── Layout ── */
+    .wrapper {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 0 24px 60px;
+    }
+
+    /* ── Hero ── */
+    header {
+      text-align: center;
+      padding: 56px 0 40px;
+    }
+
+    .app-icon {
+      width: 120px;
+      height: 120px;
+      border-radius: 26px;
+      background: linear-gradient(145deg, #FFD580, var(--amber));
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 64px;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      user-select: none;
+    }
+
+    h1 {
+      font-size: clamp(26px, 5vw, 36px);
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: 0.02em;
+    }
+
+    .subtitle {
+      font-size: clamp(16px, 3vw, 20px);
+      color: var(--muted);
+      margin-top: 10px;
+    }
+
+    .tagline {
+      display: inline-block;
+      margin-top: 18px;
+      background: var(--amber);
+      color: #fff;
+      font-size: 17px;
+      font-weight: 600;
+      padding: 10px 26px;
+      border-radius: 999px;
+      letter-spacing: 0.04em;
+    }
+
+    /* ── Section card ── */
+    .card {
+      background: var(--card);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 32px 36px;
+      margin-top: 32px;
+      box-shadow: var(--shadow);
+    }
+
+    .card h2 {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--amber-dk);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    /* ── Feature list ── */
+    .features {
+      list-style: none;
+    }
+
+    .features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 12px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 17px;
+    }
+
+    .features li:last-child { border-bottom: none; }
+
+    .feat-icon {
+      font-size: 28px;
+      flex-shrink: 0;
+      line-height: 1.3;
+    }
+
+    .feat-text strong {
+      display: block;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .feat-text span {
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    /* ── How-it-works steps ── */
+    .steps {
+      counter-reset: step;
+      list-style: none;
+    }
+
+    .steps li {
+      counter-increment: step;
+      display: flex;
+      align-items: flex-start;
+      gap: 16px;
+      padding: 10px 0;
+    }
+
+    .steps li::before {
+      content: counter(step);
+      flex-shrink: 0;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: var(--amber);
+      color: #fff;
+      font-weight: 700;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .steps li p { padding-top: 6px; font-size: 17px; }
+
+    /* ── Privacy badge ── */
+    .privacy-badge {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 12px;
+    }
+
+    .badge {
+      background: #F0F8EC;
+      border: 1px solid #B8DDA8;
+      color: #3A7D2C;
+      border-radius: 999px;
+      padding: 6px 16px;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
+    /* ── Links ── */
+    a { color: var(--amber-dk); text-decoration: underline; }
+    a:hover { color: var(--amber); }
+
+    /* ── Footer ── */
+    footer {
+      margin-top: 48px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--muted);
+      border-top: 1px solid var(--border);
+      padding-top: 28px;
+    }
+
+    footer a { color: var(--muted); }
+
+    /* ── Responsive ── */
+    @media (max-width: 480px) {
+      .card { padding: 24px 20px; }
+      body { font-size: 16px; }
+    }
+  </style>
+</head>
+<body>
+<div class="wrapper">
+
+  <!-- ── Hero ── -->
+  <header>
+    <div class="app-icon" aria-hidden="true">☀️</div>
+    <h1>好朋友起床囉</h1>
+    <p class="subtitle">BuddyCheck — 每天一鍵，讓老朋友知道你平安醒來</p>
+    <span class="tagline">亮燈報平安 🌟</span>
+  </header>
+
+  <!-- ── What is it ── -->
+  <section class="card" aria-labelledby="about-heading">
+    <h2 id="about-heading">🤝 這是什麼？</h2>
+    <p>
+      <strong>好朋友起床囉</strong>是一款專為長輩設計的手機應用程式。<br>
+      每天早上只要按一下「我起床了」，你的好朋友們就會知道你平安。
+      不是監視，是像老朋友互道早安一樣自然。
+    </p>
+  </section>
+
+  <!-- ── Features ── -->
+  <section class="card" aria-labelledby="features-heading">
+    <h2 id="features-heading">✨ 主要功能</h2>
+    <ul class="features">
+      <li>
+        <span class="feat-icon">☝️</span>
+        <div class="feat-text">
+          <strong>一鍵報平安</strong>
+          <span>每天早上點一下大按鈕，就完成了。不需要打字，不需要輸入任何東西。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feat-icon">🔆</span>
+        <div class="feat-text">
+          <strong>亮燈儀表板</strong>
+          <span>看到好友格子亮起來，就知道他們今天平安。最多可加入 9 位好友。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feat-icon">🔔</span>
+        <div class="feat-text">
+          <strong>溫柔提醒通知</strong>
+          <span>忘記打卡時，App 會輕聲提醒你，不打擾、不催促。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feat-icon">👥</span>
+        <div class="feat-text">
+          <strong>互相關心小圈圈</strong>
+          <span>建立 3–9 人的好友圈，家人或老朋友都可以加入，彼此守望相助。</span>
+        </div>
+      </li>
+      <li>
+        <span class="feat-icon">🔒</span>
+        <div class="feat-text">
+          <strong>隱私優先設計</strong>
+          <span>不追蹤位置、不使用鏡頭、不讀取通訊錄。只記錄你的打卡時間。</span>
+        </div>
+      </li>
+    </ul>
+  </section>
+
+  <!-- ── How it works ── -->
+  <section class="card" aria-labelledby="how-heading">
+    <h2 id="how-heading">📖 怎麼使用？</h2>
+    <ol class="steps">
+      <li><p>下載 App，用手機號碼或 Apple 帳號登入。</p></li>
+      <li><p>設定你的暱稱和頭像（可選），邀請好友加入你的小圈圈。</p></li>
+      <li><p>每天早上打開 App，按下大大的「我起床了」按鈕。</p></li>
+      <li><p>在儀表板上看看今天哪些好友已經亮燈了！</p></li>
+    </ol>
+  </section>
+
+  <!-- ── Privacy summary ── -->
+  <section class="card" aria-labelledby="privacy-heading">
+    <h2 id="privacy-heading">🛡️ 我們怎麼保護你的隱私？</h2>
+    <p>我們只收集讓 App 正常運作所需的最少資料：</p>
+    <div class="privacy-badge" style="margin-top: 14px;">
+      <span class="badge">✅ 不追蹤位置</span>
+      <span class="badge">✅ 不使用鏡頭</span>
+      <span class="badge">✅ 不讀取通訊錄</span>
+      <span class="badge">✅ 不出售資料</span>
+      <span class="badge">✅ 可申請刪除帳號</span>
+    </div>
+    <p style="margin-top: 18px;">
+      <a href="privacy.html">📄 閱讀完整隱私權政策</a>
+    </p>
+  </section>
+
+  <!-- ── Support ── -->
+  <section class="card" aria-labelledby="support-heading">
+    <h2 id="support-heading">💬 需要幫助？</h2>
+    <p>
+      如果有任何問題或建議，歡迎到我們的支援頁面留言：<br>
+      <a href="https://github.com/cck73823/buddycheck-site/issues"
+         target="_blank" rel="noopener noreferrer">
+        https://github.com/cck73823/buddycheck-site/issues
+      </a>
+    </p>
+  </section>
+
+  <!-- ── Footer ── -->
+  <footer>
+    <p>
+      © 2026 好朋友起床囉 (BuddyCheck) &nbsp;·&nbsp;
+      <a href="privacy.html">隱私權政策</a> &nbsp;·&nbsp;
+      <a href="https://github.com/cck73823/buddycheck-site/issues"
+         target="_blank" rel="noopener noreferrer">聯絡支援</a>
+    </p>
+    <p style="margin-top: 8px;">Apple、iPhone 是 Apple Inc. 的商標。</p>
+  </footer>
+
+</div>
+</body>
+</html>
