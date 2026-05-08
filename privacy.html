@@ -275,8 +275,13 @@
   <div class="section">
     <h2>5. 資料儲存地點與安全</h2>
     <p>
-      您的資料儲存於 <strong>Google Firebase（Firestore 資料庫）</strong>，
-      伺服器位於 <strong>美國及/或台灣地區</strong>（依 Firebase 地區設定）。
+      您的資料依類型分別儲存於以下 Google Firebase 服務：
+    </p>
+    <ul style="padding-left: 20px; margin-top: 8px;">
+      <li style="margin-bottom: 8px;"><strong>Cloud Firestore</strong>（打卡紀錄、用戶資料、好友關係）— 伺服器位於<strong>台灣（asia-east1）</strong></li>
+      <li style="margin-bottom: 8px;"><strong>Firebase Storage</strong>（頭像圖片）— 伺服器位於<strong>美國</strong></li>
+    </ul>
+    <p>
     </p>
     <p>
       Firebase 提供業界標準的加密保護：傳輸過程使用 TLS 加密，靜態資料亦加密儲存。
