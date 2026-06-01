@@ -311,6 +311,10 @@
       <li style="margin-bottom: 6px;">帳號識別碼</li>
     </ul>
     <p style="margin-top: 12px;">
+      <strong>關係事件紀錄（安全與爭議處理用途）：</strong>
+      為維護帳號安全並處理可能的爭議（例如好友關係的建立或解除之認定），我們會以最小化、去識別化／假名化方式保留關係事件紀錄。紀錄內容限於內部使用者識別碼及其組合識別碼、事件類型（加好友、解除好友、刪除帳號）、發生時間與系統保留期限；刪除帳號事件可能另包含內部 Firebase Auth 識別碼，以便在帳號刪除流程異常時完成必要的修復。不會包含您的姓名、Email、電話、頭像、打卡內容或位置等可直接識別個人的資料。此紀錄僅供系統管理者於安全維護或爭議處理有必要時存取，並自事件發生起<strong>一年</strong>後自動刪除。當您刪除帳號後，我們會移除一般帳號資料及帳號對應關係；但上述關係事件紀錄會作為「移除所有個人資料」的有限例外，依本段目的保留至期限屆滿。
+    </p>
+    <p style="margin-top: 12px;">
       如需申請刪除帳號或資料，請透過
       <a href="https://github.com/cck73823/buddycheck-site/issues" target="_blank" rel="noopener noreferrer">GitHub Issues</a>
       與我們聯繫。
